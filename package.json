@@ -1,6 +1,6 @@
 {
   "name": "@ad/vue-infinite-loading",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "An infinite scroll plugin for Vue.js",
   "main": "dist/vue-infinite-loading.ssr.js",
   "browser": "dist/vue-infinite-loading.esm.js",
