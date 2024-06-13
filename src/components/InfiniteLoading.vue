@@ -120,7 +120,7 @@ export default /* #__PURE__ */defineComponent({
      * change state for this component, pass to the callback
      */
     this.stateChanger = {
-        loaded: () => {
+      loaded: () => {
         this.isFirstLoad = false;
 
         if (this.direction === 'top') {
