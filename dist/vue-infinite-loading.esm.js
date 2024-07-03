@@ -432,6 +432,12 @@ var script = /* #__PURE__ */defineComponent({
         this.$nextTick(() => {
           this.$forceUpdate();
         });
+        if (this.direction === 'top') {
+          // wait for DOM updated
+          this.$nextTick(() => {
+            scrollBarStorage.restore(this.scrollParent);
+          });
+        }
         this.scrollParent.removeEventListener('scroll', this.scrollHandler, evt3rdArg);
         this.$emit('$InfiniteLoading:complete', {
           target: this
@@ -551,7 +557,7 @@ var script = /* #__PURE__ */defineComponent({
   }
 });
 
-const _withScopeId = n => (pushScopeId("data-v-a3694dd4"), n = n(), popScopeId(), n);
+const _withScopeId = n => (pushScopeId("data-v-51b6d47e"), n = n(), popScopeId(), n);
 const _hoisted_1 = {
   class: "infinite-loading-container"
 };
@@ -597,11 +603,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8, _hoisted_3)], 64))])], 4), [[vShow, _ctx.isShowError]])]);
 }
 
-var css_248z = ".infinite-loading-container[data-v-a3694dd4] {\n  clear: both;\n  text-align: center;\n}\n.infinite-loading-container[data-v-a3694dd4] *[class^=loading-] {\n  display: inline-block;\n  margin: 5px 0;\n  width: 28px;\n  height: 28px;\n  font-size: 28px;\n  line-height: 28px;\n  border-radius: 50%;\n}\n.btn-try-infinite[data-v-a3694dd4] {\n  margin-top: 5px;\n  padding: 5px 10px;\n  color: #999;\n  font-size: 14px;\n  line-height: 1;\n  background: transparent;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  outline: none;\n  cursor: pointer;\n}\n.btn-try-infinite[data-v-a3694dd4]:not(:active):hover {\n  opacity: 0.8;\n}\n";
+var css_248z = ".infinite-loading-container[data-v-51b6d47e] {\n  clear: both;\n  text-align: center;\n}\n.infinite-loading-container[data-v-51b6d47e] *[class^=loading-] {\n  display: inline-block;\n  margin: 5px 0;\n  width: 28px;\n  height: 28px;\n  font-size: 28px;\n  line-height: 28px;\n  border-radius: 50%;\n}\n.btn-try-infinite[data-v-51b6d47e] {\n  margin-top: 5px;\n  padding: 5px 10px;\n  color: #999;\n  font-size: 14px;\n  line-height: 1;\n  background: transparent;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  outline: none;\n  cursor: pointer;\n}\n.btn-try-infinite[data-v-51b6d47e]:not(:active):hover {\n  opacity: 0.8;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-a3694dd4";
+script.__scopeId = "data-v-51b6d47e";
 
 // Import vue component
 

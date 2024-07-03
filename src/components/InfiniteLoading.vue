@@ -143,6 +143,12 @@ export default /* #__PURE__ */defineComponent({
         this.$nextTick(() => {
           this.$forceUpdate();
         });
+        if (this.direction === 'top') {
+          // wait for DOM updated
+          this.$nextTick(() => {
+            scrollBarStorage.restore(this.scrollParent);
+          });
+        }
 
         this.scrollParent.removeEventListener('scroll', this.scrollHandler, evt3rdArg);
 

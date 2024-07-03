@@ -457,6 +457,12 @@ function isVisible(elm) {
         _this2.$nextTick(function () {
           _this2.$forceUpdate();
         });
+        if (_this2.direction === 'top') {
+          // wait for DOM updated
+          _this2.$nextTick(function () {
+            scrollBarStorage.restore(_this2.scrollParent);
+          });
+        }
         _this2.scrollParent.removeEventListener('scroll', _this2.scrollHandler, evt3rdArg);
         _this2.$emit('$InfiniteLoading:complete', {
           target: _this2
@@ -577,7 +583,7 @@ function isVisible(elm) {
     }
   }
 });var _withScopeId = function _withScopeId(n) {
-  return vue.pushScopeId("data-v-a3694dd4"), n = n(), vue.popScopeId(), n;
+  return vue.pushScopeId("data-v-51b6d47e"), n = n(), vue.popScopeId(), n;
 };
 var _hoisted_1 = {
   class: "infinite-loading-container"
@@ -634,9 +640,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       textContent: vue.toDisplayString(_ctx.slots.errorBtnText)
     }, null, 8, _hoisted_3)], 64))];
   })], 4), [[vue.vShow, _ctx.isShowError]])]);
-}var css_248z = ".infinite-loading-container[data-v-a3694dd4] {\n  clear: both;\n  text-align: center;\n}\n.infinite-loading-container[data-v-a3694dd4] *[class^=loading-] {\n  display: inline-block;\n  margin: 5px 0;\n  width: 28px;\n  height: 28px;\n  font-size: 28px;\n  line-height: 28px;\n  border-radius: 50%;\n}\n.btn-try-infinite[data-v-a3694dd4] {\n  margin-top: 5px;\n  padding: 5px 10px;\n  color: #999;\n  font-size: 14px;\n  line-height: 1;\n  background: transparent;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  outline: none;\n  cursor: pointer;\n}\n.btn-try-infinite[data-v-a3694dd4]:not(:active):hover {\n  opacity: 0.8;\n}\n";
+}var css_248z = ".infinite-loading-container[data-v-51b6d47e] {\n  clear: both;\n  text-align: center;\n}\n.infinite-loading-container[data-v-51b6d47e] *[class^=loading-] {\n  display: inline-block;\n  margin: 5px 0;\n  width: 28px;\n  height: 28px;\n  font-size: 28px;\n  line-height: 28px;\n  border-radius: 50%;\n}\n.btn-try-infinite[data-v-51b6d47e] {\n  margin-top: 5px;\n  padding: 5px 10px;\n  color: #999;\n  font-size: 14px;\n  line-height: 1;\n  background: transparent;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  outline: none;\n  cursor: pointer;\n}\n.btn-try-infinite[data-v-51b6d47e]:not(:active):hover {\n  opacity: 0.8;\n}\n";
 styleInject(css_248z);script.render = render;
-script.__scopeId = "data-v-a3694dd4";// Import vue component
+script.__scopeId = "data-v-51b6d47e";// Import vue component
 
 // Default export is installable instance of component.
 // IIFE injects install function into component, allowing component
